@@ -1,10 +1,10 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Guancheng Huang            |
+| Date         | 02/01/2024                 |
+| Course       | Spring                     |
+| Assignment # | 1                          |
 
 # Assignment Overview
 Please add a paragraph or two overviewing the objectives of the assignment.

@@ -8,7 +8,10 @@
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.example1.Person;
+import edu.bu.met.cs665.coffeemachine.Beverage;
+
+import edu.bu.met.cs665.coffeemachine.Espresso;
+import edu.bu.met.cs665.coffeemachine.Machine;
 
 /**
  * This is the Main class.
@@ -22,7 +25,17 @@ public class Main {
    * However, please note that every assignment/final projects requires JUnit tests.
    */
   public static void main(String[] args) {
-    System.out.println("This is a test message from the Main class (Main.java file)");
+
+    Machine m1 = new Machine();
+    m1.showMenu();
+    Beverage bev = m1.makeDrink();
+    m1.addMilk(bev);
+    m1.addSugar(bev);
+    m1.calculatePrice(bev);
+    m1.showDrink(bev);
+
+
+
   }
 
   /**
@@ -30,9 +43,10 @@ public class Main {
    *
    * @return String
    */
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getFirstName();
-  }
+//  private String doIt() {
+//    Person student = new Person("John", "Doe");
+//    return student.getLastName() + ',' + student.getFirstName();
+
+//  }
 
 }
