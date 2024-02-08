@@ -180,7 +180,7 @@
             <version>2.19.0</version>
         </dependency>
         <dependency>
-            <groupId>org.testifyproject.mock</groupId>
+            <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>3.12.4</version>
             <scope>test</scope>

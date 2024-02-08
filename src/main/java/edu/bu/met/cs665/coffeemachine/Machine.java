@@ -1,29 +1,42 @@
 package edu.bu.met.cs665.coffeemachine;
-
+/**
+ * Name: guancheng Huang
+ * Course: CS-665 Software Designs & Patterns
+ * Date: 02/01/2024
+ * File Name: Machine.java
+ * Description: This class is responsible for the methods and attributes of machine, which will make drinks.
+ */
 import java.util.Scanner;
 
 public class Machine {
-    private double milkPrice =0.5;
+    private double milkPrice = 0.5;
     private double sugarPrice = 0.1;
 
     public void showMenu() {
-        System.out.println("------------------------\n"+
-                "Hello! coffee machine here, choose ur drink!\n" +
-                        "Here is the menu: Espresso 1.8$, Americano 1.8$, Latte 2.0$\nAll tea 1.2$, Milk 0.5$, Sugar 0.1$");
+        System.out.println("--------------------------------------\n" +
+                "Hello! coffee machine here, here is the menu: \n" +
+                "☕Coffee: Espresso 1.8$, Americano 1.8$, Latte 2.2$\n" +
+                "🍵Tea: black tea, green tea, yellow tea. All tea 1.2$\n" +
+                "Additional milk&sugar: Milk 0.5$/unit, Sugar 0.1$/unit\n" +
+                "-----------------------------------------------"
+        );
     }
 
-    public static Beverage makeDrink() {
+    public Beverage makeDrink() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("choose ur drink coffee or tea \n enter 'a' for coffee, 'b' for tea");
-
         String choice = scanner.nextLine(); // Read user input
+        System.out.println(choice.equals("a") ? "what kind of coffee? 'a' for Espresso, 'b' for Americano, 'c' for Latte " : "which tea? ");
+        String specificChoice = scanner.nextLine();
+        return order(choice, specificChoice);
+    }
+
+    public Beverage order(String choice, String specificChoice) {
 
         switch (choice) {
             case "a":
-                System.out.println("what kind of coffee? ");
-                String coffeeChoice = scanner.nextLine();
-                switch (coffeeChoice) {
+                switch (specificChoice) {
                     case "a":
 
                         return new Espresso();
@@ -39,11 +52,9 @@ public class Machine {
 
                 }
             case "b":
-                System.out.println("which tea? ");
-                String teaChoice = scanner.nextLine();
-                switch (teaChoice) {
+                switch (specificChoice) {
                     case "a":
-                        return new BlackTea("sleep tea", 114.514);
+                        return new BlackTea();
 
                     case "b":
                         return new GreenTea();
@@ -52,9 +63,7 @@ public class Machine {
                         return new YellowTea();
                     default:
                         break;
-
                 }
-
         }
         return null;
     }
@@ -86,10 +95,11 @@ public class Machine {
 
         // System.out.printf("Here is ur drink:" %s", have a nice
         // day:-)",bev.getDrinkName(),);
+        System.out.println("------------receipt-----------------------");
         System.out.println("ur drink:" + bev.getDrinkName());
         System.out.println("sugar:" + bev.getSugarLevel());
         System.out.println("milk: " + bev.getMilkLevel());
-        System.out.println("price:" + bev.getPrice());// has problem
+        System.out.printf("price:" + "%5.1f" , bev.getPrice());// has problem
     }
 
 }
