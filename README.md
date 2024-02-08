@@ -1,35 +1,29 @@
-
 | CS-665       | Software Design & Patterns |
-|--------------|----------------------------|
+| ------------ | -------------------------- |
 | Name         | Guancheng Huang            |
 | Date         | 02/01/2024                 |
 | Course       | Spring                     |
 | Assignment # | 1                          |
 
 # Assignment Overview
+
 Please add a paragraph or two overviewing the objectives of the assignment.
 This assignment is about a coffee machine java program mainly using class, constructor, inheritance,
 
 # GitHub Repository Link:
+
 https://github.com/guanchengBU/cs-665-assignment-1
-# Implementation Description 
 
+# Implementation Description
 
-For each assignment, please answer the following:
-
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- 
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- Could be high level of flexibility, new object types can be easily added or removed in the future, because of using inheritance and encapsulation. But since using switch statement, need to also modify the switch.
+- It's easy to understand and maintain. Because this program only have two important classes: Beverage and Machine. Beverage only has its attributes, getters and setters. machine class mainly functions changing the beverage state. 
+- By using encapsulation to avoid duplicated code.
 
 
 # Maven Commands
 
-We'll use Apache Maven to compile and run this project. You'll need to install Apache Maven (https://maven.apache.org/) on your system. 
+We'll use Apache Maven to compile and run this project. You'll need to install Apache Maven (https://maven.apache.org/) on your system.
 
 Apache Maven is a build automation tool and a project management tool for Java-based projects. Maven provides a standardized way to build, package, and deploy Java applications.
 
@@ -42,15 +36,15 @@ Maven also integrates with other development tools, such as IDEs and continuous 
 Maven provides a large number of plugins for various tasks, such as compiling code, running tests, generating reports, and creating JAR files. This makes it a versatile tool that can be used for many different types of Java projects.
 
 ## Compile
-Type on the command line: 
+
+Type on the command line:
 
 ```bash
 mvn clean compile
 ```
 
-
-
 ## JUnit Tests
+
 JUnit is a popular testing framework for Java. JUnit tests are automated tests that are written to verify that the behavior of a piece of code is as expected.
 
 In JUnit, tests are written as methods within a test class. Each test method tests a specific aspect of the code and is annotated with the @Test annotation. JUnit provides a range of assertions that can be used to verify the behavior of the code being tested.
@@ -62,12 +56,12 @@ The use of JUnit tests is an important part of Test-Driven Development (TDD), wh
 JUnit tests can be run as part of a continuous integration pipeline, where tests are automatically run every time changes are made to the code. This helps to catch any issues as soon as they are introduced, reducing the need for manual testing and making it easier to ensure that the code is always in a releasable state.
 
 To run, use the following command:
+
 ```bash
 mvn clean test
 ```
 
-
-## Spotbugs 
+## Spotbugs
 
 SpotBugs is a static code analysis tool for Java that detects potential bugs in your code. It is an open-source tool that can be used as a standalone application or integrated into development tools such as Eclipse, IntelliJ, and Gradle.
 
@@ -80,16 +74,15 @@ Using SpotBugs can help to improve the quality and reliability of your code by c
 Use the following command:
 
 ```bash
-mvn spotbugs:gui 
+mvn spotbugs:gui
 ```
 
-For more info see 
+For more info see
 https://spotbugs.readthedocs.io/en/latest/maven.html
 
 SpotBugs https://spotbugs.github.io/ is the spiritual successor of FindBugs.
 
-
-## Checkstyle 
+## Checkstyle
 
 Checkstyle is a development tool for checking Java source code against a set of coding standards. It is an open-source tool that can be integrated into various integrated development environments (IDEs), such as Eclipse and IntelliJ, as well as build tools like Maven and Gradle.
 
@@ -99,7 +92,7 @@ By using Checkstyle, developers can ensure that their code adheres to a consiste
 
 Checkstyle is highly configurable and can be customized to fit the needs of your team or organization. It supports a wide range of coding standards and can be integrated with other tools, such as code coverage and automated testing tools, to create a comprehensive and automated software development process.
 
-The following command will generate a report in HTML format that you can open in a web browser. 
+The following command will generate a report in HTML format that you can open in a web browser.
 
 ```bash
 mvn checkstyle:checkstyle
@@ -107,7 +100,3 @@ mvn checkstyle:checkstyle
 
 The HTML page will be found at the following location:
 `target/site/checkstyle.html`
-
-
-
-

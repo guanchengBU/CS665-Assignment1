@@ -1,9 +1,9 @@
 /**
- * Name: FIRST_NAME LAST_NAME
+ * Name: Guancheng Huang
  * Course: CS-665 Software Designs & Patterns
- * Date: MM/DD/YYYY
+ * Date: 02/01/2024
  * File Name: Main.java
- * Description: Write a description for this class
+ * Description: This class is responsible for running the program.
  */
 
 package edu.bu.met.cs665;

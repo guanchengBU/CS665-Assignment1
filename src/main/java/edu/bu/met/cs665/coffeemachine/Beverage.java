@@ -4,7 +4,7 @@ package edu.bu.met.cs665.coffeemachine;
  * Course: CS-665 Software Designs & Patterns
  * Date: 02/01/2024
  * File Name: beverage.java
- * Description: This class is responsible for the methods and attributes of Beverage.
+ * Description: This class is responsible for the methods and attributes of Beverage, which is the parent class of all drink.
  */
 public class Beverage {
     private double price;
